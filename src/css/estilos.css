@@ -1,0 +1,206 @@
+body {
+
+   font-family: 'outfit', sans-serif;
+   background-image: url(sub-imagem/matrix-full.png);
+   /*(../)=busca a imagem em outra pasta*/
+
+   /*background-repeat: no-repeat;  /*não repete a imagem de fundo*/
+   /*background-size: cover;  /*cobre toda a tela*/
+   /*min-height: 100vh; qro o body com 100% de altura da tela*/
+   /*OBS:ao acrescentar os comandos logo acima, background ñ aparecia completo*/
+
+}
+
+/* .aparelhos {
+   
+   text-align: center;
+   padding: 50px;
+   border-radius: 50px;
+   color: #7fff00;
+  
+
+} */
+
+.cabecalho {
+   /*background-color: red; tirei pq só era pra visualizar melhor a header*/
+   text-align: center;
+   /*alinha ao centro*/
+   padding: 50px 0;
+   
+
+}
+
+
+
+/*no cabecalho abaixo o espaço indica q vou mexer no título "jet-dev*/
+.cabecalho h1 {
+
+   color: #ff00bf;
+   font-size: 35px;
+   letter-spacing: 5px;
+}
+   
+   /*__entre letras e text-transform: uppercase seria p/deixar maiúsculo obs:eu ñ adicionei pq meu jet-dev já estava maiúsculo;*/
+
+
+
+
+.p {
+   color: #ffffff;
+   letter-spacing: 2px;
+   text-align: right;
+   padding-right: 730px;
+}
+
+.personagens-slider {
+
+   display: flex;
+   /*colocou os filhos(botões e personagens) q está dentro do pai(main personagens-slider)1 do lado do outro*/
+   justify-content: center;
+   /*alinha ao centro horizontal*/
+   align-items: center;
+   /*alinha ao centro vertical*/
+   gap: 80px;
+   /*espaçamento entre os filhos*/
+
+}
+
+.lista-personagens {
+
+   width: 300px;
+   height: 520px;
+   text-align: center;
+   position: relative;
+   /*o pai alinhou os filhos*/
+
+}
+
+.btn-seta {
+   background-color: #cdc4e6;
+   width: 70px;
+   height: 70px;
+   border-radius: 10px;
+   /*deixar redondo*/
+   border: 0;
+   cursor: pointer;
+   /*muda pra mãozinha*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: background-color 0, 2s ease-in-out;
+   /*faz a transição do hover ficar + suave, no caso a transição da background-color*/
+   box-shadow: rgba(20, 1, 1, 0.9) 0px 7px 29px 0px;
+   /*css-box-shadow-examples site p/ sombra*/
+
+}
+
+.btn-seta.btn-voltar {
+   transform: rotatey(180deg);
+}
+
+/*utilize :hover p/dar erfeito qnd passar o cursor*/
+.btn-seta:hover {
+   background-color: rgba(219, 18, 169, 0.726);
+}
+
+.cartao {
+   opacity: 0;
+   /*0 torna o elemento invisível, 1 visível*/
+
+   height: 100%;
+   position: absolute;
+   /*coloca um elemento em cima do outro(nesse caso aqui, os filhos)*/
+   padding: 12px;
+   border-radius: 20px;
+   box-shadow: whitesmoke 0px 7px 29px 0px;
+   transition: opacity 0, 3s ease-in-out;
+
+}
+
+.cartao.selecionado {
+   opacity: 1;
+   z-index: 1;
+   /*força o card seu clope ser o 1.*/
+
+}
+
+.cartao .imagem-personagem {
+   width: 100%;
+   max-height: 280px;
+   border-radius: 20px;
+   padding: 2%;
+
+
+}
+
+.cartao .nome {
+   background-color: rgba(219, 18, 169, 0.726);
+   border-radius: 20px;
+   padding: 8px 10px;
+   color: rgb(17, 241, 36);
+   text-align: left;
+   font-size: 20px;
+   letter-spacing: 5px;
+   /*espaço entre as letras*/
+   box-shadow: rgba(35, 248, 35, 0.9) 9px 9px 9px 0px;
+}
+
+.cartao .descricao {
+   background-color: rgba(42, 24, 116, 0.493);
+   border-radius: 20px;
+   padding: 8px 10px;
+}
+
+.cartao .descricao .título {
+   background-color: rgba(219, 18, 169, 0.726);
+   color: rgb(17, 241, 36);
+   text-align: left;
+
+   padding: 12px;
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   box-shadow: rgba(35, 248, 35, 0.9) 9px 9px 9px 0px;
+
+}
+
+.cartao .descricao .texto {
+   color: white;
+   font-size: 14px;
+   padding: 12px;
+   text-align: justify;
+   max-height: 130px;
+   overflow-y: auto;
+   /*bota o texto q está vazando pra dentro da div*/
+
+     
+}
+
+.musica {
+   padding: 1%;
+   box-shadow: rgba(35, 248, 35, 0.9) 9px 9px 9px 0px;
+   border-radius: 40%;
+  }
+
+.cartao.fundo-1 {
+   background: url(../imagenx/fundo-1.jpg) no-repeat;
+}
+
+.cartao.fundo-2 {
+   background: url(../imagenx/fundo-2.jpg) no-repeat;
+}
+
+.cartao.fundo-3 {
+   background: url(../imagenx/fundo-3.jpg) no-repeat;
+}
+
+.cartao.fundo-4 {
+   background: url(../imagenx/fundo-4.jpg) no-repeat;
+}
+
+.cartao.fundo-5 {
+   background: url(../imagenx/fundo-5.jpg) no-repeat;
+}
+
+.cartao.fundo-6 {
+   background: url(../imagenx/fundo-6.jpg) no-repeat;
+}
